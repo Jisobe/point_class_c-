@@ -1,0 +1,79 @@
+Lab 5
+For lab5, you need to:
+-explain your solution to our teaching assistant, and
+-submit it through the blackboard.
+
+
+Question1:
+Create a Point class, implement Equality operator, Inequality operator, Comparison operator(four), Insertion operator (make it as friend of Point class), Arithmetic operators and Compound Assignment operator. Show the Point class and explain to your teaching assistant step by step by using the four test cases.
+
+Point
+---------------------
+-x: int
+-y: int
+---------------------
++Point(int x, int y) // constructor
++operator==(other: Point)
++operator!=(other: Point)
++operator<(other: Point)
++operator>(other: Point)
++operator<=(other: Point)
++operator>=(other: Point)
++operator<<() (friend of Point class)
++operator+(value: int)
++operator+=(value: int)
+
+
+In the main function, please test the following 4 cases:
+// test case 1:
+int main()
+{
+Point first{ 10, 20 };
+Point second{ 12, 21 };
+if (first == second) {
+std::cout << "equal";
+}
+else {
+std::cout << "not equal";
+}
+return 0;
+}
+// output:
+// test case 2:
+int main()
+{
+Point first{ 10, 20 };
+Point second{ 12, 21 };
+if (first < second)
+std::cout << "first is less than second";
+return 0;
+}
+// output:
+// test case 3:
+int main()
+{
+Point first{ 10, 20 };
+Point second{ 12, 21 };
+std::cout << "first: " << first << "," << "second: " << second;
+return 0;
+}
+// output:
+// test case 4:
+int main()
+{
+Point first{ 10, 20 };
+Point second{ 12, 21 };
+std::cout << first + 50;
+second += 100;
+std::cout << second;
+return 0;
+}
+// output:
+
+
+
+Question 2:
+Continue working on Lab 4, Array class.
+ Overload subscript operator: []
+ Overload dereference(indirection) operator: *
+ Apply “Rule of three” to Array class
